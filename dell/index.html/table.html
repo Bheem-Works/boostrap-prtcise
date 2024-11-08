@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+     <!-- stripted rows -->
+        <div class="container mt-3">
+        <table class="table table-striped">
+      <h5>Stripted row</h2>
+
+            <thead>
+                <tr>
+                    <!-- th meand the table head and its make the text bold  -->
+                    <th>firstname</th>
+                    <th>last name</th>
+                    <th>email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>john</td>
+                    <td>doe</td>
+                    <td>johm@example.com</td>
+                </tr>
+                <tr>
+                    <td>mary</td>
+                    <td>roe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <!-- if you want to add down then write tr = table row 
+                 after that write td and type! -->
+                 <td>Vim</td>
+                 <td>magar</td>
+                 <td>vim@example.com</td>
+
+            </tbody>
+        </table>
+    </div>
+
+        <!-- another one part 2 table -->
+         <!-- bordered table -->
+         <div class="container mt-3">
+            <h2>border table</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>CLASS</th>
+                        <th>RANK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BHIM</td>
+                        <td>11</td>
+                        <td>1ST</td>
+                    </tr>
+                    <TR>
+                        <TD>SAHEK</TD>
+                        <TD>11</TD>
+                        <TD>5TH</TD>
+                    </TR>
+                </tbody>
+            </table>
+         </div>
+
+         <!-- THE THIRD ONE  -->
+          <!-- hover rows -->
+           <div class="container mt-3">
+            <table class="table table-hover">
+           <h2>hover table</h2>
+
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>CLASS</th>
+                        <th>RANK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BHIM</td>
+                        <td>11</td>
+                        <td>1ST</td>
+                    </tr>
+                    <TR>
+                        <TD>SAHEK</TD>
+                        <TD>11</TD>
+                        <TD>5TH</TD>
+                    </TR>
+                </tbody>
+            </table>
+           </div>
+
+           <!-- another fourth one -->
+            <!-- black/dark theme  -->
+            <!-- you can also add new things in class like i add table-hover -->
+             <div class="container mt-3">
+                <h2>black/dark theme</h2>
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>item</th>
+                            <th>quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mouse</td>
+                            <td>wireless</td>
+                            <td>2 pieces</td>
+                        </tr>
+                        <tr>
+                            <td>keyboard</td>
+                            <td>wireless</td>
+                            <td>5 pieces</td>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+             <!-- another part  -->
+              <!-- border less -->
+             <div class="container mt-3">
+                <h2>borderless row</h2>
+                <table class="table table-boderless">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>item</th>
+                            <th>quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mouse</td>
+                            <td>wireless</td>
+                            <td>2 pieces</td>
+                        </tr>
+                        <tr>
+                            <td>keyboard</td>
+                            <td>wireless</td>
+                            <td>5 pieces</td>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+
+             <!-- contextual table  -->
+              <!-- in this table you have to color the table -->
+               <div class="container mt-3">
+                <table class="table">
+                    <h2>contextual/color table</h2>
+                    <thead>
+                        <tr class="table-primary">
+                            <th>Product</th>
+                            <th>item</th>
+                            <th>quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-warning">
+                            <td>mouse</td>
+                            <td>wireless</td>
+                            <td>2 pieces</td>
+                        </tr>
+                        <tr class="table-active">
+                            <td>keyboard</td>
+                            <td>wireless</td>
+                            <td>5 pieces</td>
+                        </tr>
+                    </tbody>
+                </table>
+               </div>
+               <!-- tABLE HEAD COLOR -->
+                <!-- you have to give a class in which table or table row you want to color
+                 and write table-color*(any color names) -->
+               <div class="container mt-3">
+                <h2>table head color</h2>
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Product</th>
+                            <th>item</th>
+                            <th>quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mouse</td>
+                            <td>wireless</td>
+                            <td>2 pieces</td>
+                        </tr>
+                        <tr>
+                            <td>keyboard</td>
+                            <td>wireless</td>
+                            <td>5 pieces</td>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+             <!-- small table just change by add sm in table class -->
+             <div class="container mt-3">
+                <h2>small table</h2>
+                <table class="table table-bordered table-sm">
+                    <thead class="table">
+                        <tr>
+                            <th>Product</th>
+                            <th>item</th>
+                            <th>quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mouse</td>
+                            <td>wireless</td>
+                            <td>2 pieces</td>
+                        </tr>
+                        <tr>
+                            <td>keyboard</td>
+                            <td>wireless</td>
+                            <td>5 pieces</td>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+             <!-- responsive table  -->
+              <div class="container mt-3">
+                <div class="table-responsive">
+                    <h2>responsive</h2>
+                    <table class="table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>first name</th>
+                                <th>last name</th>
+                                <th>Bravo</th>
+                                <th>Bravo</th>
+                                <th>Bravo</th>
+                                <th>Bravo</th>
+                                <th>Bravo</th>
+                                <th>Bravo</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>bravo</td>
+                                <td>bravo</td>
+                                <td>bravo</td>
+                                <td>bravo</td>
+                                <td>bravo</td>
+                                <td>bravo</td>
+                                <td>bravo</td>
+                                <td>bravo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- The end of the table may you found this helpful  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
