@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Example</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#section1" class="nav-link">Section 1</a>
+          </li>
+          <li class="nav-item">
+            <a href="#section2" class="nav-link">Section 2</a>
+          </li>
+          <li class="nav-item">
+            <a href="#section3" class="nav-link">Section 3</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Sections -->
+    <div class="container mt-5">
+      <div
+        id="section1"
+        class="container-fluid bg-success text-white"
+        style="padding: 100px 20px"
+      >
+        <p class="lead">
+          A "devil cat" often refers to a cat with a mischievous, wild, or
+          intimidating personality...
+        </p>
+      </div>
+      <div
+        id="section2"
+        class="container-fluid bg-info text-white"
+        style="padding: 100px 20px"
+      >
+        <p class="lead">
+          Cats are fascinating creatures known for their elegance, independence,
+          and playful personalities...
+        </p>
+      </div>
+      <div
+        id="section3"
+        class="container-fluid bg-warning text-white"
+        style="padding: 100px 20px"
+      >
+        <p class="lead">
+          A "devil cat" often refers to a cat with a mischievous, wild, or
+          intimidating personality...
+        </p>
+      </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="container mt-3">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Tooltip Content"
+      >
+        Tooltip
+      </button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Hooray!"
+      >
+        Tooltip
+      </button>
+    </div>
+
+    <!-- Popover -->
+    <div class="container mt-3">
+      <button
+        class="btn btn-warning"
+        data-bs-toggle="popover"
+        title="Popover Header"
+        data-bs-content="Miso is not at home today."
+      >
+        Popover
+      </button>
+    </div>
+
+    <!-- Toast -->
+    <div class="container mt-3">
+      <div class="toast show">
+        <div class="toast-header">
+          <strong class="me-auto">Toast</strong>
+          <button
+            class="btn-close"
+            data-bs-dismiss="toast"
+            type="button"
+          ></button>
+        </div>
+        <div class="toast-body">This is a toast notification.</div>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <button class="btn btn-primary" id="toastbtn" type="button">
+        Show Toast
+      </button>
+      <div class="toast">
+        <div class="toast-header">
+          <strong class="me-auto">Toast</strong>
+          <button
+            class="btn-close"
+            data-bs-dismiss="toast"
+            type="button"
+          ></button>
+        </div>
+        <div class="toast-body">This is another toast notification.</div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Initialize popovers
+      document.addEventListener("DOMContentLoaded", function () {
+        var popoverTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="popover"]')
+        );
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl);
+        });
+      });
+
+      // Initialize tooltips
+      document.addEventListener("DOMContentLoaded", function () {
+        var tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+      });
+
+      // Show toast on button click
+      document.getElementById("toastbtn").onclick = function () {
+        var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+        var toastList = toastElList.map(function (toastEl) {
+          return new bootstrap.Toast(toastEl);
+        });
+        toastList.forEach((toast) => toast.show());
+      };
+    </script>
+  </body>
+</html>
